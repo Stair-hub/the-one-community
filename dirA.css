@@ -1,0 +1,200 @@
+/* ============================================================
+   DIRECTION A — Éditorial audacieux
+   Cream + deep navy + warm orange. Instrument Serif display,
+   Space Mono labels, Hanken Grotesk body.
+   ============================================================ */
+
+.dirA {
+  --cream: #FBF6EC;
+  --paper: #FFFDF8;
+  --ink: #16181D;
+  --navy: #0E2148;
+  --navy-2: #0A1838;
+  --orange: #EF5A1B;
+  --orange-ink: #C2410C;
+  --line: rgba(14,33,72,.16);
+  --muted: rgba(22,24,29,.62);
+
+  background: var(--cream);
+  color: var(--ink);
+  font-family: "Hanken Grotesk", system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.55;
+}
+.dirA .serif { font-family: "Instrument Serif", Georgia, serif; font-weight: 400; }
+.dirA .mono {
+  font-family: "Space Mono", ui-monospace, monospace;
+  text-transform: uppercase; letter-spacing: .12em; font-size: 12px;
+}
+
+/* ---- layout shell ---- */
+.dirA .wrap { max-width: 1240px; margin: 0 auto; padding: 0 64px; }
+
+/* ---- top bar ---- */
+.dirA .nav {
+  display: flex; align-items: center; gap: 36px;
+  padding: 26px 64px; max-width: 1240px; margin: 0 auto;
+}
+.dirA .nav-logo { display: flex; align-items: center; gap: 12px; }
+.dirA .nav-mark {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--navy); color: var(--cream);
+  display: flex; align-items: center; justify-content: center;
+  font-family: "Instrument Serif", serif; font-size: 22px; line-height: 1;
+}
+.dirA .nav-word { display: flex; flex-direction: column; justify-content: center; font-weight: 700; letter-spacing: -.01em; font-size: 17px; line-height: 1.15; }
+.dirA .nav-word span { font-weight: 500; color: var(--muted); font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; margin-top: 2px; }
+.dirA .nav-links { display: flex; gap: 26px; margin-left: auto; font-size: 15px; font-weight: 500; }
+.dirA .nav-links a { white-space: nowrap; }
+.dirA .nav-links a { padding-bottom: 2px; border-bottom: 2px solid transparent; transition: border-color .15s; }
+.dirA .nav-links a:hover { border-color: var(--orange); }
+.dirA .btn {
+  display: inline-flex; align-items: center; gap: 9px;
+  font-weight: 600; font-size: 15px; padding: 13px 22px; border-radius: 999px;
+  transition: transform .15s, background .15s, color .15s;
+}
+.dirA .btn-primary { background: var(--orange); color: #fff; }
+.dirA .btn-primary:hover { transform: translateY(-2px); }
+.dirA .btn-dark { background: var(--navy); color: var(--cream); }
+.dirA .btn-dark:hover { transform: translateY(-2px); }
+.dirA .btn-ghost { border: 1.5px solid var(--navy); color: var(--navy); }
+.dirA .btn-ghost:hover { background: var(--navy); color: var(--cream); }
+
+/* ---- hero ---- */
+.dirA .hero { padding: 30px 0 56px; }
+.dirA .hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: end; }
+.dirA .eyebrow { color: var(--orange-ink); margin-bottom: 26px; }
+.dirA .hero h1 {
+  font-family: "Instrument Serif", serif; font-weight: 400;
+  font-size: 92px; line-height: .98; letter-spacing: -.015em; margin: 0;
+  color: var(--navy);
+}
+.dirA .hero h1 em { font-style: italic; color: var(--orange); }
+.dirA .hero-sub { font-size: 20px; line-height: 1.5; color: var(--muted); max-width: 30ch; margin: 26px 0 32px; }
+.dirA .hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; }
+.dirA .hero-media { position: relative; }
+.dirA .hero-media image-slot { width: 100%; height: 520px; border-radius: 18px; overflow: hidden; }
+.dirA .hero-badge {
+  position: absolute; left: -22px; bottom: 34px;
+  background: var(--paper); border: 1px solid var(--line);
+  border-radius: 14px; padding: 14px 18px; display: flex; align-items: center; gap: 12px;
+  box-shadow: 0 18px 40px rgba(14,33,72,.14);
+}
+.dirA .hero-badge .num { font-family: "Instrument Serif", serif; font-size: 34px; line-height: 1; color: var(--navy); }
+.dirA .hero-badge .lbl { font-size: 13px; line-height: 1.3; color: var(--muted); max-width: 13ch; }
+
+/* ---- mission band ---- */
+.dirA .mission { background: var(--navy); color: var(--cream); padding: 76px 0; margin-top: 18px; }
+.dirA .mission .wrap { display: grid; grid-template-columns: auto 1fr; gap: 56px; align-items: start; }
+.dirA .mission .tag { color: rgba(251,246,236,.6); }
+.dirA .mission p {
+  font-family: "Instrument Serif", serif; font-size: 42px; line-height: 1.18; margin: 0;
+  letter-spacing: -.01em; max-width: 22ch;
+}
+.dirA .mission p b { color: var(--orange); font-weight: 400; font-style: italic; }
+
+/* ---- section head ---- */
+.dirA .shead { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 40px; }
+.dirA .shead h2 { font-family: "Instrument Serif", serif; font-weight: 400; font-size: 56px; line-height: 1; letter-spacing: -.01em; margin: 0; color: var(--navy); }
+.dirA .shead .lead { color: var(--muted); max-width: 36ch; }
+
+/* ---- activities ---- */
+.dirA .activities { padding: 84px 0; }
+.dirA .acts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--line); }
+.dirA .act {
+  padding: 34px 30px 38px; border-bottom: 1px solid var(--line);
+  border-right: 1px solid var(--line); position: relative; transition: background .2s;
+}
+.dirA .act:nth-child(3n) { border-right: none; }
+.dirA .act:hover { background: var(--paper); }
+.dirA .act .idx { font-family: "Space Mono", monospace; font-size: 13px; color: var(--orange-ink); }
+.dirA .act h3 { font-family: "Instrument Serif", serif; font-weight: 400; font-size: 30px; line-height: 1.05; margin: 16px 0 10px; color: var(--navy); }
+.dirA .act p { font-size: 15.5px; color: var(--muted); margin: 0 0 16px; }
+.dirA .tags { display: flex; flex-wrap: wrap; gap: 7px; }
+.dirA .tag-chip { font-family: "Space Mono", monospace; font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--navy); border: 1px solid var(--line); border-radius: 999px; padding: 4px 10px; }
+
+/* ---- agenda ---- */
+.dirA .agenda { background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 84px 0; }
+.dirA .events { display: flex; flex-direction: column; gap: 0; }
+.dirA .event {
+  display: grid; grid-template-columns: 120px 1fr auto; gap: 32px; align-items: center;
+  padding: 26px 0; border-top: 1px solid var(--line);
+}
+.dirA .event:last-child { border-bottom: 1px solid var(--line); }
+.dirA .ev-date { text-align: center; line-height: 1; }
+.dirA .ev-date .d { font-family: "Instrument Serif", serif; font-size: 46px; color: var(--navy); }
+.dirA .ev-date .m { font-family: "Space Mono", monospace; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--orange-ink); margin-top: 6px; }
+.dirA .ev-body h3 { font-size: 23px; font-weight: 700; margin: 0 0 6px; color: var(--ink); letter-spacing: -.01em; }
+.dirA .ev-body .meta { font-size: 14px; color: var(--muted); display: flex; gap: 16px; flex-wrap: wrap; }
+.dirA .ev-cta { white-space: nowrap; }
+
+/* ---- values ---- */
+.dirA .values { padding: 84px 0; }
+.dirA .vals { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
+.dirA .val .vk { font-family: "Instrument Serif", serif; font-size: 40px; color: var(--orange); line-height: 1; }
+.dirA .val h4 { font-size: 19px; font-weight: 700; margin: 16px 0 8px; color: var(--navy); }
+.dirA .val p { font-size: 14.5px; color: var(--muted); margin: 0; }
+
+/* ---- join CTA ---- */
+.dirA .join { background: var(--orange); color: #fff; padding: 80px 0; }
+.dirA .join .top { display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: end; margin-bottom: 44px; }
+.dirA .join h2 { font-family: "Instrument Serif", serif; font-weight: 400; font-size: 64px; line-height: .98; margin: 0; }
+.dirA .join .top p { margin: 0; max-width: 34ch; font-size: 18px; color: rgba(255,255,255,.9); }
+.dirA .paths { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.dirA .path { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.28); border-radius: 16px; padding: 26px 24px; transition: background .2s; }
+.dirA .path:hover { background: rgba(255,255,255,.2); }
+.dirA .path .pk { font-family: "Space Mono", monospace; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; opacity: .85; }
+.dirA .path h3 { font-size: 24px; font-weight: 700; margin: 12px 0 8px; }
+.dirA .path p { margin: 0 0 18px; font-size: 15px; color: rgba(255,255,255,.9); }
+.dirA .path .arrow { font-weight: 700; }
+
+/* ---- footer ---- */
+.dirA .foot { background: var(--navy-2); color: var(--cream); padding: 72px 0 40px; }
+.dirA .foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; }
+.dirA .foot h5 { font-family: "Space Mono", monospace; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: rgba(251,246,236,.55); margin: 0 0 16px; font-weight: 400; }
+.dirA .foot .blurb { color: rgba(251,246,236,.78); font-size: 15px; max-width: 30ch; margin: 16px 0 0; }
+.dirA .foot ul li { padding: 5px 0; color: rgba(251,246,236,.82); font-size: 15px; }
+.dirA .foot ul li a:hover { color: var(--orange); }
+.dirA .foot .brand { display: flex; align-items: center; gap: 12px; }
+.dirA .foot-bottom { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-top: 52px; padding-top: 24px; border-top: 1px solid rgba(251,246,236,.16); font-size: 13px; color: rgba(251,246,236,.55); }
+.dirA .foot-bottom .legal { display: flex; gap: 22px; flex-wrap: wrap; }
+
+/* ---- RESPONSIVE MEDIA QUERIES ---- */
+@media (max-width: 1024px) {
+  .dirA .wrap { padding: 0 32px; }
+  .dirA .nav { padding: 20px 32px; gap: 20px; }
+  .dirA .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+  .dirA .hero h1 { font-size: 64px; }
+  .dirA .hero-media image-slot { height: 400px; }
+  .dirA .mission .wrap { grid-template-columns: 1fr; gap: 24px; }
+  .dirA .mission p { font-size: 32px; }
+  .dirA .acts { grid-template-columns: repeat(2, 1fr); }
+  .dirA .act:nth-child(3n) { border-right: 1px solid var(--line); }
+  .dirA .act:nth-child(2n) { border-right: none; }
+  .dirA .vals { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+  .dirA .paths { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .dirA .foot-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+}
+
+@media (max-width: 768px) {
+  .dirA .wrap { padding: 0 20px; }
+  .dirA .nav { flex-direction: column; align-items: stretch; text-align: center; gap: 16px; padding: 20px; }
+  .dirA .nav-logo { justify-content: center; }
+  .dirA .nav-links { justify-content: center; flex-wrap: wrap; gap: 16px; margin: 0; }
+  .dirA .nav .btn { align-self: center; }
+  .dirA .hero h1 { font-size: 48px; }
+  .dirA .hero-media image-slot { height: 300px; }
+  .dirA .hero-badge { left: 0; bottom: -20px; }
+  .dirA .shead { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .dirA .acts { grid-template-columns: 1fr; }
+  .dirA .act { border-right: none !important; padding: 24px 0; }
+  .dirA .event { grid-template-columns: 1fr; text-align: center; justify-items: center; gap: 16px; }
+  .dirA .vals { grid-template-columns: 1fr; gap: 24px; }
+  .dirA .join .top { grid-template-columns: 1fr; gap: 20px; }
+  .dirA .join .top .btn { align-self: flex-start; }
+  .dirA .paths { grid-template-columns: 1fr; }
+  .dirA .foot-grid { grid-template-columns: 1fr; gap: 32px; }
+  .dirA .foot-bottom { flex-direction: column; align-items: center; text-align: center; }
+  .dirA .foot-bottom .legal { justify-content: center; }
+}
+

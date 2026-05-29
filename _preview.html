@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8" />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Mono:wght@400;700&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="base.css" /><link rel="stylesheet" href="dirA.css" />
+<link rel="stylesheet" href="dirB.css" /><link rel="stylesheet" href="dirC.css" />
+<style>html,body{margin:0;background:#ddd}#root{width:100%;max-width:1440px;margin:0 auto;background:#fff}</style></head>
+<body><div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="image-slot.js"></script>
+
+<script type="text/babel">
+/* HomeA — Direction A · Éditorial audacieux */
+function HomeA() {
+  const acts = [
+    { i: "01", t: "Creative Hub", d: "Un espace collaboratif dédié au digital, au web, aux médias et à l'événementiel.", tags: ["Digital", "Web", "Média", "Event"] },
+    { i: "02", t: "Coworking & salles", d: "Postes de travail flexibles et salles de réunion à louer, à l'heure ou à la journée.", tags: ["Bureaux", "Réunions"] },
+    { i: "03", t: "Événementiel", d: "Ateliers, conférences et rencontres culturelles qui font vivre la communauté.", tags: ["Ateliers", "Conférences"] },
+    { i: "04", t: "Formation & coaching", d: "Accompagnement en ligne et en présentiel pour faire grandir vos projets et compétences.", tags: ["En ligne", "Présentiel"] },
+    { i: "05", t: "Inclusion sociale", d: "Des projets concrets qui favorisent l'intégration et le lien entre les communautés.", tags: ["Diversité", "Lien"] },
+    { i: "06", t: "Collecte de fonds", d: "Crowdfunding, ventes solidaires et subventions au service de l'impact social.", tags: ["Solidarité", "Dons"] },
+  ];
+  const events = [
+    { d: "12", m: "Juin", t: "Atelier Créa — Brand & réseaux sociaux", meta: ["18h00 · Bd Adolphe Max 26", "Gratuit · sur inscription"], cta: "S'inscrire" },
+    { d: "21", m: "Juin", t: "Coworking Day — portes ouvertes", meta: ["10h00 · Espace activités", "Entrée libre"], cta: "Réserver" },
+    { d: "28", m: "Juin", t: "Rencontre des porteurs de projets", meta: ["19h00 · Rue Haute 60A", "Networking"], cta: "S'inscrire" },
+  ];
+  const vals = [
+    { k: "①", t: "Inclusion", d: "Chaque communauté a sa place. Nous bâtissons des ponts, pas des murs." },
+    { k: "②", t: "Innovation", d: "Le numérique et la création comme leviers d'émancipation." },
+    { k: "③", t: "Impact", d: "Des actions mesurables, ancrées dans le réel bruxellois." },
+    { k: "④", t: "Collaboration", d: "On va plus loin ensemble : membres, partenaires et bénévoles." },
+  ];
+  const paths = [
+    { k: "Adhésion", t: "Devenir membre", d: "Adhérez et accédez à l'espace, aux ateliers et au réseau.", cta: "Adhérer" },
+    { k: "Temps", t: "Bénévolat", d: "Donnez de votre temps et de vos talents à des projets utiles.", cta: "S'engager" },
+    { k: "Soutien", t: "Faire un don", d: "Soutenez nos actions d'inclusion et d'innovation sociale.", cta: "Soutenir" },
+  ];
+
+  return (
+    <div className="toc-home dirA">
+      {/* NAV */}
+      <nav className="nav">
+        <a className="nav-logo" href="#mission">
+          <image-slot id="logoA" shape="circle" style={{ width: "40px", height: "40px" }} placeholder="Logo"></image-slot>
+          <span className="nav-word">The One Community<span>asbl · Bruxelles</span></span>
+        </a>
+        <ul className="nav-links">
+          <li><a href="#mission">À propos</a></li>
+          <li><a href="#activities">Activités</a></li>
+          <li><a href="#agenda">Agenda</a></li>
+          <li><a href="#join">Nous rejoindre</a></li>
+          <li><a href="#foot">Contact</a></li>
+        </ul>
+        <a className="btn btn-primary" href="#activities">Réserver un espace</a>
+      </nav>
+
+      {/* HERO */}
+      <header className="hero">
+        <div className="wrap hero-grid">
+          <div>
+            <div className="mono eyebrow">Creative Hub · Bruxelles · depuis 2017</div>
+            <h1 className="serif">Créons,<br />innovons,<br /><em>impactons.</em></h1>
+            <p className="hero-sub">The One Community rassemble les talents et les communautés de Bruxelles dans un même espace créatif — pour apprendre, collaborer et bâtir des projets à impact.</p>
+            <div className="hero-ctas">
+              <a className="btn btn-dark" href="#activities">Découvrir nos activités</a>
+              <a className="btn btn-ghost" href="#join">Nous rejoindre</a>
+            </div>
+          </div>
+          <div className="hero-media">
+            <image-slot id="heroA" shape="rounded" radius="18" style={{ width: "100%", height: "520px" }} placeholder="Photo de la communauté / d'un événement"></image-slot>
+            <div className="hero-badge">
+              <span className="num serif">1,4k+</span>
+              <span className="lbl">membres &amp; abonnés actifs</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* MISSION */}
+      <section className="mission" id="mission">
+        <div className="wrap">
+          <div className="mono tag">Notre mission</div>
+          <p className="serif">Favoriser la <b>promotion et l'intégration socio-culturelle</b> des communautés qui composent le paysage social et professionnel de Belgique.</p>
+        </div>
+      </section>
+
+      {/* ACTIVITÉS */}
+      <section className="activities" id="activities">
+        <div className="wrap">
+          <div className="shead">
+            <h2 className="serif">Ce que nous faisons</h2>
+            <p className="lead">Un lieu unique pour créer, se former, se rencontrer et entreprendre — ouvert à toutes et à tous, 7 jours sur 7.</p>
+          </div>
+          <div className="acts">
+            {acts.map((a) => (
+              <article className="act" key={a.i}>
+                <div className="idx">{a.i}</div>
+                <h3 className="serif">{a.t}</h3>
+                <p>{a.d}</p>
+                <div className="tags">{a.tags.map((t) => <span className="tag-chip" key={t}>{t}</span>)}</div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* AGENDA */}
+      <section className="agenda" id="agenda">
+        <div className="wrap">
+          <div className="shead">
+            <h2 className="serif">Prochains rendez-vous</h2>
+            <a className="btn btn-ghost" href="#">Voir tout l'agenda</a>
+          </div>
+          <div className="events">
+            {events.map((e, i) => (
+              <article className="event" key={i}>
+                <div className="ev-date">
+                  <div className="d serif">{e.d}</div>
+                  <div className="m">{e.m}</div>
+                </div>
+                <div className="ev-body">
+                  <h3>{e.t}</h3>
+                  <div className="meta">{e.meta.map((m) => <span key={m}>{m}</span>)}</div>
+                </div>
+                <a className="btn btn-primary ev-cta" href="#">{e.cta}</a>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* VALEURS */}
+      <section className="values">
+        <div className="wrap">
+          <div className="shead">
+            <h2 className="serif">Nos valeurs</h2>
+            <p className="lead">Quatre principes qui guident chacune de nos actions, de l'accueil à l'accompagnement.</p>
+          </div>
+          <div className="vals">
+            {vals.map((v) => (
+              <div className="val" key={v.t}>
+                <div className="vk serif">{v.k}</div>
+                <h4>{v.t}</h4>
+                <p>{v.d}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* JOIN */}
+      <section className="join" id="join">
+        <div className="wrap">
+          <div className="top">
+            <h2 className="serif">Rejoignez la communauté</h2>
+            <p>Membre, bénévole ou donateur — il y a mille façons de faire partie de l'aventure The One Community.</p>
+          </div>
+          <div className="paths">
+            {paths.map((p) => (
+              <a className="path" href="#" key={p.t}>
+                <div className="pk">{p.k}</div>
+                <h3>{p.t}</h3>
+                <p>{p.d}</p>
+                <div className="arrow">{p.cta} →</div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="foot" id="foot">
+        <div className="wrap">
+          <div className="foot-grid">
+            <div>
+              <div className="brand">
+                <image-slot id="logoAf" shape="circle" style={{ width: "38px", height: "38px" }} placeholder="Logo"></image-slot>
+                <strong>The One Community</strong>
+              </div>
+              <p className="blurb">Association Sans But Lucratif créée en 2017 à Bruxelles. Let's create, innovate, impact.</p>
+            </div>
+            <div>
+              <h5>Visiter</h5>
+              <ul>
+                <li>60A Rue Haute, 1000 Bruxelles</li>
+                <li>Espace activités — Bd Adolphe Max 26</li>
+                <li style={{ marginTop: "12px" }}>Lun–Ven · 10h–19h</li>
+                <li>Sam 10h–18h · Dim 12h–16h</li>
+              </ul>
+            </div>
+            <div>
+              <h5>Contact</h5>
+              <ul>
+                <li><a href="https://wa.me/32489280722" target="_blank" rel="noopener noreferrer">+32 489 28 07 22 (WhatsApp)</a></li>
+                <li><a href="mailto:info.theonecommunity@gmail.com">info.theonecommunity@gmail.com</a></li>
+                <li style={{ marginTop: "12px" }}><a href="https://www.instagram.com/theonecommunity_asbl" target="_blank" rel="noopener noreferrer">Instagram @theonecommunity_asbl</a></li>
+                <li><a href="https://www.facebook.com/Theonecommunity" target="_blank" rel="noopener noreferrer">Facebook Theonecommunity</a></li>
+              </ul>
+            </div>
+            <div>
+              <h5>Naviguer</h5>
+              <ul>
+                <li><a href="#mission">À propos</a></li>
+                <li><a href="#activities">Nos activités</a></li>
+                <li><a href="#agenda">Agenda</a></li>
+                <li><a href="#join">Nous rejoindre</a></li>
+                <li><a href="#foot">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div className="foot-bottom">
+            <span>© 2025 The One Community asbl</span>
+            <div className="legal">
+              <span>N° entreprise 0671.522.486</span>
+              <span>TVA BE0671522486</span>
+              <a href="#">Mentions légales</a>
+              <a href="#">Vie privée · RGPD</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
+window.HomeA = HomeA;
+
+</script>
+
+<script type="text/babel">
+/* HomeB — Direction B · Communauté vibrante */
+function HomeB() {
+  const acts = [
+    { i: "★", t: "Espaces Partagés", d: "Du coworking chaleureux, des salles de réunion inspirantes et des coins détente pour échanger.", tags: ["Coworking", "Rencontres"] },
+    { i: "★", t: "Le Creative Hub", d: "Un lab citoyen pour expérimenter le digital, la vidéo, le podcast et les nouveaux médias.", tags: ["Digital", "Média", "Lab"] },
+    { i: "★", t: "Événements & Fêtes", d: "Des conférences citoyennes, des expos locales, des concerts acoustiques et des repas partagés.", tags: ["Culture", "Convivialité"] },
+    { i: "★", t: "Ateliers & Savoirs", d: "Transmettre des compétences pratiques : codage, transition écologique, prise de parole.", tags: ["Partage", "Pratique"] },
+    { i: "★", t: "Solidarité Active", d: "Des permanences d'entraide numérique, de l'inclusion sociale et du soutien aux initiatives locales.", tags: ["Impact", "Proximité"] },
+    { i: "★", t: "Projets Collectifs", d: "Financement participatif et accompagnement de projets associatifs bruxellois.", tags: ["Co-création", "ASBL"] },
+  ];
+
+  const events = [
+    { d: "15", m: "Juin", t: "Apéro des Voisins & Pitch de Projets", meta: ["18h30 · Espace convivial", "Entrée libre · Apportez un en-cas"], cta: "Participer" },
+    { d: "22", m: "Juin", t: "Initiation Podcast — Enregistrez votre voix", meta: ["14h00 · Studio Radio", "Gratuit · sur inscription"], cta: "S'inscrire" },
+    { d: "29", m: "Juin", t: "Fresque de la Transition Numérique", meta: ["19h00 · Grande Salle", "Intelligence collective"], cta: "Réserver" },
+  ];
+
+  const vals = [
+    { k: "✨", t: "Humain d'abord", d: "L'accueil et la bienveillance guident chaque rencontre dans nos espaces." },
+    { k: "🤝", t: "Force du collectif", d: "C'est en croisant nos idées et nos énergies qu'on change la ville." },
+    { k: "🌱", t: "Simplicité & Durabilité", d: "Des solutions ancrées dans le bon sens et respectueuses du vivant." },
+    { k: "🎈", t: "Créativité partagée", d: "Pas besoin d'être un expert pour créer, oser et s'amuser ensemble." },
+  ];
+
+  const paths = [
+    { k: "Communauté", t: "Rejoindre la tribu", d: "Devenez membre pour accéder au lieu et participer à la vie du hub.", cta: "C'est parti !" },
+    { k: "Entraide", t: "Donner un coup de main", d: "Partagez vos passions ou donnez un peu de temps pour nos projets solidaires.", cta: "Je m'engage" },
+    { k: "Soutien", t: "Faire vivre le projet", d: "Faites un don pour nous aider à garder nos activités accessibles à tous.", cta: "Faire un don" },
+  ];
+
+  return (
+    <div className="toc-home dirB">
+      {/* NAV */}
+      <nav className="nav">
+        <a className="nav-logo" href="#mission">
+          <image-slot id="logoB" shape="rounded" radius="8" style={{ width: "40px", height: "40px" }} placeholder="Logo"></image-slot>
+          <span className="nav-word">The One Community<span>asbl · Ensemble à Bruxelles</span></span>
+        </a>
+        <ul className="nav-links">
+          <li><a href="#mission">Notre histoire</a></li>
+          <li><a href="#activities">Le lieu</a></li>
+          <li><a href="#agenda">Agenda des activités</a></li>
+          <li><a href="#join">Agir avec nous</a></li>
+        </ul>
+        <a className="btn btn-primary" href="#foot">Passer nous voir</a>
+      </nav>
+
+      {/* HERO */}
+      <header className="hero">
+        <div className="wrap hero-grid">
+          <div>
+            <div className="badge-vib">BIENVENUE CHEZ VOUS ☀</div>
+            <h1 className="title-bold">Un lieu vibrant pour se <span>rencontrer,</span> créer et <em>s'entraider.</em></h1>
+            <p className="hero-sub">The One Community est un tiers-lieu associatif et chaleureux au cœur de Bruxelles. Ici, on mixe les cultures, on partage nos savoirs et on fait grandir des projets solidaires.</p>
+            <div className="hero-ctas">
+              <a className="btn btn-primary" href="#agenda">Découvrir le programme</a>
+              <a className="btn btn-secondary" href="#join">Devenir membre</a>
+            </div>
+          </div>
+          <div className="hero-media">
+            <image-slot id="heroB" shape="rounded" radius="24" style={{ width: "100%", height: "520px" }} placeholder="Photo souriante de l'équipe et des membres"></image-slot>
+            <div className="hero-badge">
+              <span className="emoji">🌻</span>
+              <span className="lbl">Déjà <strong>1500+ bruxellois</strong> engagés au quotidien !</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* MISSION */}
+      <section className="mission" id="mission">
+        <div className="wrap">
+          <p className="quote">
+            Notre rêve ? Construire un espace d'<strong>apprentissage populaire et de solidarité</strong> où chaque personne se sent accueillie, écoutée et actrice du changement à Bruxelles.
+          </p>
+        </div>
+      </section>
+
+      {/* ACTIVITÉS */}
+      <section className="activities" id="activities">
+        <div className="wrap">
+          <div className="shead">
+            <h2 className="title-section">La vie au quotidien</h2>
+            <p className="lead">Une ruche d'activités ouverte à toutes et tous, des petits matins caféinés aux soirées de débats.</p>
+          </div>
+          <div className="acts">
+            {acts.map((a, idx) => (
+              <article className="act" key={idx}>
+                <div className="idx">{a.i}</div>
+                <h3>{a.t}</h3>
+                <p>{a.d}</p>
+                <div className="tags">{a.tags.map((t) => <span className="tag-chip" key={t}>{t}</span>)}</div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* AGENDA */}
+      <section className="agenda" id="agenda">
+        <div className="wrap">
+          <div className="shead">
+            <h2 className="title-section">L'Agenda du coin</h2>
+            <a className="btn btn-secondary" href="#agenda">Toutes les dates</a>
+          </div>
+          <div className="events">
+            {events.map((e, i) => (
+              <article className="event" key={i}>
+                <div className="ev-date">
+                  <div className="d">{e.d}</div>
+                  <div className="m">{e.m}</div>
+                </div>
+                <div className="ev-body">
+                  <h3>{e.t}</h3>
+                  <div className="meta">{e.meta.map((m) => <span key={m}>{m}</span>)}</div>
+                </div>
+                <a className="btn btn-primary ev-cta" href="#">{e.cta}</a>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* VALEURS */}
+      <section className="values">
+        <div className="wrap">
+          <div className="shead">
+            <h2 className="title-section">Ce qui nous anime</h2>
+            <p className="lead">Des principes simples pour une vie associative joyeuse, inclusive et dynamique.</p>
+          </div>
+          <div className="vals">
+            {vals.map((v) => (
+              <div className="val" key={v.t}>
+                <div className="vk">{v.k}</div>
+                <h4>{v.t}</h4>
+                <p>{v.d}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* JOIN */}
+      <section className="join" id="join">
+        <div className="wrap">
+          <div className="top">
+            <h2 className="title-section">Faites partie de l'aventure !</h2>
+            <p>Pas besoin de grand-chose pour commencer : une idée, un sourire, ou simplement l'envie de boire un café en bonne compagnie.</p>
+          </div>
+          <div className="paths">
+            {paths.map((p) => (
+              <a className="path" href="#" key={p.t}>
+                <div className="pk">{p.k}</div>
+                <h3>{p.t}</h3>
+                <p>{p.d}</p>
+                <div className="arrow">{p.cta} →</div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="foot" id="foot">
+        <div className="wrap">
+          <div className="foot-grid">
+            <div>
+              <div className="brand">
+                <image-slot id="logoBf" shape="rounded" radius="6" style={{ width: "38px", height: "38px" }} placeholder="Logo"></image-slot>
+                <strong>The One Community</strong>
+              </div>
+              <p className="blurb">Un projet citoyen porté par l'ASBL The One Community à Bruxelles depuis 2017. Rejoignez la dynamique !</p>
+            </div>
+            <div>
+              <h5>Le Tiers-Lieu</h5>
+              <ul>
+                <li>60A Rue Haute, 1000 Bruxelles</li>
+                <li>Mardi au Samedi · 10h–20h</li>
+                <li>Dimanche brunch · 11h–16h</li>
+              </ul>
+            </div>
+            <div>
+              <h5>Prendre contact</h5>
+              <ul>
+                <li><a href="https://wa.me/32489280722" target="_blank" rel="noopener noreferrer">+32 489 28 07 22 (WhatsApp)</a></li>
+                <li><a href="mailto:info.theonecommunity@gmail.com">info.theonecommunity@gmail.com</a></li>
+                <li><a href="https://www.instagram.com/theonecommunity_asbl" target="_blank" rel="noopener noreferrer">Instagram @theonecommunity_asbl</a></li>
+                <li><a href="https://www.facebook.com/Theonecommunity" target="_blank" rel="noopener noreferrer">Facebook Theonecommunity</a></li>
+              </ul>
+            </div>
+            <div>
+              <h5>Découvrir</h5>
+              <ul>
+                <li><a href="#mission">Qui sommes-nous ?</a></li>
+                <li><a href="#join">Devenir bénévole</a></li>
+                <li><a href="#activities">Location d'espaces</a></li>
+                <li><a href="#join">Faire un don</a></li>
+              </ul>
+            </div>
+          </div>
+          <div className="foot-bottom">
+            <span>© 2025 The One Community asbl</span>
+            <div className="legal">
+              <span>N° 0671.522.486</span>
+              <a href="#">Mentions légales</a>
+              <a href="#">Vie privée</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
+window.HomeB = HomeB;
+
+</script>
+
+<script type="text/babel">
+/* HomeC — Direction C · Creative Hub studio */
+function HomeC() {
+  const acts = [
+    { i: "// 01", t: "Studio Média & Podcasts", d: "Enregistrement haute définition, régie intégrée, outils de montage de pointe pour créateurs.", tags: ["Audio", "Vidéo", "Streaming"] },
+    { i: "// 02", t: "Espace Coworking", d: "Bureaux ergonomiques, connexion fibre symétrique, cabines d'appel et café à volonté.", tags: ["Ergonomie", "Fibre", "Focus"] },
+    { i: "// 03", t: "Laboratoire Web & Digital", d: "Ateliers intensifs en programmation, design UI/UX, intelligence artificielle et web3.", tags: ["Dev", "Design", "Tech"] },
+    { i: "// 04", t: "Événements & Meetups", d: "Conférences technologiques, démonstrations de projets, hackathons et tables rondes.", tags: ["Meetups", "Démos", "Réseau"] },
+    { i: "// 05", t: "Inclusion & Mentorat", d: "Programmes d'accès gratuit aux technologies pour tous, sessions de mentorat individuel.", tags: ["Égalité", "Social", "Futur"] },
+    { i: "// 06", t: "Accélérateur d'ASBL", d: "Aide à la digitalisation des associations locales pour maximiser leur impact social.", tags: ["Impact", "Transition", "Clé"] },
+  ];
+
+  const events = [
+    { d: "18", m: "Juin", t: "Hackathon Solidaire — Code pour Bruxelles", meta: ["09h00–18h00 · Lab Tech", "Inscriptions ouvertes aux devs & designers"], cta: "S'inscrire" },
+    { d: "25", m: "Juin", t: "Masterclass — IA générative & Création Visuelle", meta: ["19h00 · Espace Conférence", "Gratuit · Places limitées"], cta: "Réserver" },
+    { d: "02", m: "Juil", t: "Démo Day — Présentation des projets du Hub", meta: ["18h30 · Studio Principal", "Networking & drinks"], cta: "Participer" },
+  ];
+
+  const vals = [
+    { k: "[TECH]", t: "Innovation ouverte", d: "Les technologies doivent servir d'outils d'émancipation partagés par tous." },
+    { k: "[CODE]", t: "Apprentissage par le faire", d: "Pas de théorie inutile. Nous construisons de vrais outils et projets concrets." },
+    { k: "[LINK]", t: "Diversité & Synergies", d: "C'est à l'intersection de profils variés que naissent les meilleures idées." },
+    { k: "[BOLD]", t: "Impact mesurable", d: "Nous concevons des solutions numériques pour le monde réel bruxellois." },
+  ];
+
+  const paths = [
+    { k: "S'inscrire", t: "Devenir Résident", d: "Rejoignez le hub créatif pour bosser sur vos projets numériques.", cta: "Candidater" },
+    { k: "Co-créer", t: "Partager son expertise", d: "Devenez mentor ou animez un atelier technique pour la communauté.", cta: "Proposer" },
+    { k: "Soutenir", t: "Financer l'inclusion", d: "Aidez-nous à financer le matériel informatique de nos ateliers citoyens.", cta: "Faire un don" },
+  ];
+
+  return (
+    <div className="toc-home dirC">
+      {/* NAV */}
+      <nav className="nav">
+        <a className="nav-logo" href="#mission">
+          <image-slot id="logoC" shape="rect" style={{ width: "40px", height: "40px" }} placeholder="Logo"></image-slot>
+          <span className="nav-word">The One Community<span>asbl // Creative Hub & Studio</span></span>
+        </a>
+        <ul className="nav-links">
+          <li><a href="#activities">Studio</a></li>
+          <li><a href="#activities">Coworking</a></li>
+          <li><a href="#agenda">Agenda</a></li>
+          <li><a href="#join">Transition</a></li>
+        </ul>
+        <a className="btn btn-primary" href="#activities">Réserver un studio</a>
+      </nav>
+
+      {/* HERO */}
+      <header className="hero">
+        <div className="wrap hero-grid">
+          <div>
+            <div className="mono eyebrow">[ CONNECTING TALENTS // BRUXELLES ]</div>
+            <h1 className="title-tech">Le futur numérique se construit <span>ensemble.</span></h1>
+            <p className="hero-sub">The One Community est un Creative Hub dédié à l'innovation sociale, aux nouveaux médias et aux technologies numériques. Un écosystème ouvert pour apprendre, coder et créer.</p>
+            <div className="hero-ctas">
+              <a className="btn btn-primary" href="#activities">Explorer le studio</a>
+              <a className="btn btn-ghost" href="#join">Rejoindre la tech</a>
+            </div>
+          </div>
+          <div className="hero-media">
+            <image-slot id="heroC" shape="rect" style={{ width: "100%", height: "520px" }} placeholder="Visuals studio / setup / neon design"></image-slot>
+            <div className="hero-badge">
+              <span className="num">[ 100% ]</span>
+              <span className="lbl">communautaire, ouvert, axé impact</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* MISSION */}
+      <section className="mission" id="mission">
+        <div className="wrap">
+          <div className="mono tag">// NOTRE OBJECTIF //</div>
+          <p className="tech-quote">Démocratiser l'accès aux technologies numériques, former les talents créatifs de demain et propulser les initiatives citoyennes à Bruxelles.</p>
+        </div>
+      </section>
+
+      {/* ACTIVITÉS */}
+      <section className="activities" id="activities">
+        <div className="wrap">
+          <div className="shead">
+            <h2 className="title-section">Nos pôles d'action</h2>
+            <p className="lead">Des ressources matérielles et humaines de pointe pour accompagner votre parcours créatif et technique.</p>
+          </div>
+          <div className="acts">
+            {acts.map((a, idx) => (
+              <article className="act" key={idx}>
+                <div className="idx mono">{a.i}</div>
+                <h3>{a.t}</h3>
+                <p>{a.d}</p>
+                <div className="tags">{a.tags.map((t) => <span className="tag-chip mono" key={t}>{t}</span>)}</div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* AGENDA */}
+      <section className="agenda" id="agenda">
+        <div className="wrap">
+          <div className="shead">
+            <h2 className="title-section">Agenda // Tech & Création</h2>
+            <a className="btn btn-ghost" href="#agenda">Découvrir tout</a>
+          </div>
+          <div className="events">
+            {events.map((e, i) => (
+              <article className="event" key={i}>
+                <div className="ev-date mono">
+                  <div className="d">{e.d}</div>
+                  <div className="m">{e.m}</div>
+                </div>
+                <div className="ev-body">
+                  <h3>{e.t}</h3>
+                  <div className="meta mono">{e.meta.map((m) => <span key={m}>{m}</span>)}</div>
+                </div>
+                <a className="btn btn-primary ev-cta mono" href="#">{e.cta}</a>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* VALEURS */}
+      <section className="values">
+        <div className="wrap">
+          <div className="shead">
+            <h2 className="title-section">Nos Principes</h2>
+            <p className="lead">Une méthodologie axée sur le partage libre, l'efficience technique et le progrès social.</p>
+          </div>
+          <div className="vals">
+            {vals.map((v) => (
+              <div className="val" key={v.t}>
+                <div className="vk mono">{v.k}</div>
+                <h4>{v.t}</h4>
+                <p>{v.d}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* JOIN */}
+      <section className="join" id="join">
+        <div className="wrap">
+          <div className="top">
+            <h2 className="title-section">Rejoignez l'écosystème</h2>
+            <p>Développeurs, créatifs, curieux, militants — connectez-vous au réseau pour collaborer sur des projets à forte utilité sociale.</p>
+          </div>
+          <div className="paths">
+            {paths.map((p) => (
+              <a className="path" href="#" key={p.t}>
+                <div className="pk mono">{p.k}</div>
+                <h3>{p.t}</h3>
+                <p>{p.d}</p>
+                <div className="arrow mono">{p.cta} &gt;</div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="foot" id="foot">
+        <div className="wrap">
+          <div className="foot-grid">
+            <div>
+              <div className="brand">
+                <image-slot id="logoCf" shape="rect" style={{ width: "38px", height: "38px" }} placeholder="Logo"></image-slot>
+                <strong>The One Community</strong>
+              </div>
+              <p className="blurb">Tiers-lieu digital et studio d'innovation sociale au service des citoyens de la région bruxelloise.</p>
+            </div>
+            <div>
+              <h5>Studio & Lab</h5>
+              <ul>
+                <li>60A Rue Haute, 1000 Bruxelles</li>
+                <li>Lundi au Vendredi · 09h–21h</li>
+                <li>Samedi · 10h–18h</li>
+              </ul>
+            </div>
+            <div>
+              <h5>Canaux</h5>
+              <ul>
+                <li><a href="https://wa.me/32489280722" target="_blank" rel="noopener noreferrer">+32 489 28 07 22 (WhatsApp)</a></li>
+                <li><a href="mailto:info.theonecommunity@gmail.com">info.theonecommunity@gmail.com</a></li>
+                <li><a href="https://github.com/theonecommunity" target="_blank" rel="noopener noreferrer">github.com/theonecommunity</a></li>
+                <li><a href="https://www.instagram.com/theonecommunity_asbl" target="_blank" rel="noopener noreferrer">Instagram @theonecommunity_asbl</a></li>
+                <li><a href="https://www.facebook.com/Theonecommunity" target="_blank" rel="noopener noreferrer">Facebook Theonecommunity</a></li>
+              </ul>
+            </div>
+            <div>
+              <h5>Navigation</h5>
+              <ul>
+                <li><a href="#activities">Espaces</a></li>
+                <li><a href="#activities">Formations</a></li>
+                <li><a href="#join">Dépôt de projet</a></li>
+                <li><a href="#foot">ASBL</a></li>
+              </ul>
+            </div>
+          </div>
+          <div className="foot-bottom mono">
+            <span>// © 2025 THE ONE COMMUNITY ASBL</span>
+            <div className="legal">
+              <span>ENTREPRISE: 0671.522.486</span>
+              <span>BE0671522486</span>
+              <a href="#">MENTIONS</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
+window.HomeC = HomeC;
+
+</script>
+
+<script type="text/babel">
+  const which = new URLSearchParams(location.search).get('d') || 'A';
+  const C = window['Home'+which];
+  ReactDOM.createRoot(document.getElementById('root')).render(C ? <C/> : <div>missing</div>);
+</script>
+</body></html>

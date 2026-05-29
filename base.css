@@ -1,0 +1,34 @@
+/* ============================================================
+   The One Community asbl — base & shared tokens
+   Each direction is scoped under .dirA / .dirB / .dirC so the
+   three homepages can coexist on one design canvas without
+   any style collisions.
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+.toc-home {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+.toc-home img { display: block; max-width: 100%; }
+.toc-home a { text-decoration: none; color: inherit; }
+.toc-home button { font: inherit; cursor: pointer; border: none; background: none; }
+.toc-home ul { margin: 0; padding: 0; list-style: none; }
+
+/* image-slot inherits the rounding of its host context */
+.toc-home image-slot { display: block; }
+
+/* shared placeholder mono caption look for striped image areas */
+.toc-ph {
+  background-image: repeating-linear-gradient(
+    -45deg, rgba(0,0,0,.05) 0 1px, transparent 1px 11px);
+  display: flex; align-items: center; justify-content: center;
+  font-family: "Space Mono", ui-monospace, monospace;
+  font-size: 12px; letter-spacing: .04em; text-transform: uppercase;
+  color: rgba(0,0,0,.4);
+}
