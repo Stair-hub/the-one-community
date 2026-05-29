@@ -6,39 +6,46 @@ Ce document réunit un modèle d'e-mail de présentation professionnelle ainsi q
 
 ## ✉️ Modèle d'E-mail à envoyer au client (User)
 
-*Vous pouvez copier-coller et personnaliser ce message pour l'envoyer à votre client (par e-mail, sur Slack ou via WhatsApp) afin de lui présenter la proposition de site.*
+*Vous pouvez copier-coller et personnaliser ce message pour l'envoyer à votre futur client (par e-mail, via un message privé sur Facebook ou Instagram) afin de lui présenter votre démarche et votre travail.*
 
 ***
 
-**Objet :** Propositions de design pour le futur site internet de The One Community asbl 🚀
+**Objet :** Une proposition de site internet sur mesure pour The One Community asbl 🚀
 
 Bonjour,
 
-J'espère que vous allez bien.
+Je me permets de vous contacter car je suis développeuse web indépendante et je suis avec beaucoup d'intérêt les formidables actions de **The One Community asbl** via votre page Facebook.
 
-Dans le cadre du développement du site internet de **The One Community asbl**, j'ai le plaisir de vous présenter trois propositions de design distinctes et entièrement interactives. 
+En découvrant vos projets, j'ai constaté que vous ne disposiez pas encore d'un site internet officiel pour centraliser vos activités, votre agenda d'événements et vos espaces de coworking / studio. 
+
+Pour vous aider à maximiser votre visibilité en ligne et faciliter l'engagement de votre communauté à Bruxelles, je me suis permis de prendre les devants : **j'ai conçu et développé un prototype interactif de site internet sur mesure pour The One Community, décliné en trois exemples de design différents.**
 
 J'ai réuni ces propositions sur un site unique où vous pouvez basculer instantanément d'un style à un autre grâce au sélecteur de design situé tout en bas de votre écran :
 
-👉 **Découvrir vos propositions de site en direct :** [https://stair-hub.github.io/the-one-community/](https://stair-hub.github.io/the-one-community/)
+👉 **Découvrir votre futur site internet en direct :** [https://stair-hub.github.io/the-one-community/](https://stair-hub.github.io/the-one-community/)
 
-### Les trois pistes proposées :
+### Les trois directions de design proposées :
 1. **Direction A (Bold Editorial)** : Une approche artistique élégante et aérée, qui met en avant l'éditorial, avec un fort contraste crème, bleu marine et orange chaud.
 2. **Direction B (Vibrant Community)** : Une ambiance chaleureuse, accueillante et colorée (terracotta, miel, olive) avec des formes arrondies qui illustrent la convivialité et la force collective.
 3. **Direction C (Cyber Studio)** : Un design sombre, épuré et technologique aux accents néon (cyan et vert électrique), idéal pour valoriser le Creative Hub digital et l'aspect innovation.
 
-Chaque design est entièrement fluide et s'adapte parfaitement sur mobile, tablette et ordinateur.
+Chaque design est entièrement fluide, moderne et s'adapte parfaitement sur mobile, tablette et ordinateur (100% responsive).
 
-### Prochaines étapes :
-Pour que nous puissions affiner la proposition finale, choisir votre style préféré et intégrer vos contenus définitifs, je vous invite à parcourir le court questionnaire ci-dessous. 
+### Collaborons ensemble !
+Ce travail est une base de discussion. Si cette initiative vous plaît, je serais ravie de collaborer avec vous pour :
+- Choisir et personnaliser votre design préféré selon vos retours.
+- Intégrer vos textes, vos photos réelles et vos prochains événements.
+- Configurer les formulaires d'adhésion, de bénévolat et de dons.
+- Mettre en ligne le site définitif avec votre propre nom de domaine.
 
-Nous pourrons également planifier un bref appel de 10 minutes la semaine prochaine pour en discuter de vive voix.
+Que diriez-vous d'échanger brièvement (10 minutes par appel ou café) pour que vous me disiez ce que vous en pensez ?
 
-Dans l'attente de vos retours, je vous souhaite une excellente découverte !
+Je vous souhaite une excellente découverte du prototype !
 
 Bien chaleureusement,
 
 [Votre Prénom / Votre Nom]
+Développeuse Web Indépendante
 
 ***
 
