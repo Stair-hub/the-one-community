@@ -1,10 +1,46 @@
 # 📋 Guide de Clarification & Questions pour le Client (User)
 
-Ce document réunit l'ensemble des questions et précisions à valider avec votre client (**user**) pour finaliser et personnaliser le site internet de **The One Community asbl**. 
-
-Vous pouvez copier-coller ce contenu ou le partager directement avec lui.
+Ce document réunit un modèle d'e-mail de présentation professionnelle ainsi que l'ensemble des questions à valider avec votre client (**user**) pour finaliser le site internet de **The One Community asbl**.
 
 ---
+
+## ✉️ Modèle d'E-mail à envoyer au client (User)
+
+*Vous pouvez copier-coller et personnaliser ce message pour l'envoyer à votre client (par e-mail, sur Slack ou via WhatsApp) afin de lui présenter la proposition de site.*
+
+***
+
+**Objet :** Propositions de design pour le futur site internet de The One Community asbl 🚀
+
+Bonjour,
+
+J'espère que vous allez bien.
+
+Dans le cadre du développement du site internet de **The One Community asbl**, j'ai le plaisir de vous présenter trois propositions de design distinctes et entièrement interactives. 
+
+J'ai réuni ces propositions sur un site unique où vous pouvez basculer instantanément d'un style à un autre grâce au sélecteur de design situé tout en bas de votre écran :
+
+👉 **Découvrir vos propositions de site en direct :** [https://stair-hub.github.io/the-one-community/](https://stair-hub.github.io/the-one-community/)
+
+### Les trois pistes proposées :
+1. **Direction A (Bold Editorial)** : Une approche artistique élégante et aérée, qui met en avant l'éditorial, avec un fort contraste crème, bleu marine et orange chaud.
+2. **Direction B (Vibrant Community)** : Une ambiance chaleureuse, accueillante et colorée (terracotta, miel, olive) avec des formes arrondies qui illustrent la convivialité et la force collective.
+3. **Direction C (Cyber Studio)** : Un design sombre, épuré et technologique aux accents néon (cyan et vert électrique), idéal pour valoriser le Creative Hub digital et l'aspect innovation.
+
+Chaque design est entièrement fluide et s'adapte parfaitement sur mobile, tablette et ordinateur.
+
+### Prochaines étapes :
+Pour que nous puissions affiner la proposition finale, choisir votre style préféré et intégrer vos contenus définitifs, je vous invite à parcourir le court questionnaire ci-dessous. 
+
+Nous pourrons également planifier un bref appel de 10 minutes la semaine prochaine pour en discuter de vive voix.
+
+Dans l'attente de vos retours, je vous souhaite une excellente découverte !
+
+Bien chaleureusement,
+
+[Votre Prénom / Votre Nom]
+
+***
 
 ## 📂 Partie 1 : Contenu global & Identité Visuelle
 
